@@ -32,6 +32,17 @@
 
 //CODE HERE
 
+const pizza = {
+
+    name: "Pepperoni",
+    price: 12,
+    category: "entree",
+    popularity: 8,
+    rating: 42,
+    tags: ["family", "large","white flour"]
+
+}
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +55,7 @@
 
 //CODE HERE
 
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +66,7 @@
 
 //CODE HERE
 
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -64,6 +77,9 @@
 
 //CODE HERE
 
+const {price} = pizza
+
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +89,9 @@
 */
 
 //CODE HERE
+const {category} = pizza
 
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,6 +106,18 @@
 */
 
 //CODE HERE
+
+
+const foodArr = {
+
+    name: "lemon",
+    price: 17,
+    category: "appetizer",
+    popularity: 10,
+    rating: 59,
+    tags: ["vegan", "medium","cauliflower"]
+
+}
 
 
 
@@ -105,9 +135,15 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(callback => {
+     
+   if(callback.tags.includes("vegan")){
+       return callback
+   }
 
+})
 
+console.log(filteredFood("fsdf"))
 
 //////////////////PROBLEM 5////////////////////
 /* 

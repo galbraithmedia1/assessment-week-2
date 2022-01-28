@@ -35,8 +35,11 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, curr)=>{
+    return acc + curr.price
+}, 0)
 
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,7 +58,11 @@ const cart = [
 
 //CODE HERE
 
+const calcFinalPrice = (cartTotal, couponValue, tax)=>{
+     return ((cartTotal * (1 +tax) )- couponValue)
+}
 
+console.log(calcFinalPrice(100, 5, .06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -80,6 +87,10 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+    name: "string" We will need to keep track of a name for each order.
+    orderId: number  Every order will need an id so we can keep track of each sepereate orders.
+    tags: [""] We will want a tags section with arrays inside to sort each orders parameters.
+    address: "string" we will want to know where the customer lives.
 */
 
 /*
@@ -88,3 +99,11 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+
+    name: "Taylor",
+    orderId: 1402,
+    tags: ["Pepperoni", "large", "thin"],
+    address: "1111 west 1111 e 93493"
+}
