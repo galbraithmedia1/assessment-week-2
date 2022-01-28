@@ -135,15 +135,15 @@ const foodArr = {
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(callback => {
+const filteredFood = foodArr.tags.filter((element) => {
      
-   if(callback.tags.includes("vegan")){
-       return callback
+   if(element.includes("vegan")){
+       return element
    }
 
 })
 
-console.log(filteredFood("fsdf"))
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -186,6 +186,10 @@ console.log(filteredFood("fsdf"))
 
 //CODE HERE
 
+const filterByProperty=(property, number, type)=>{
+
+    let filterdArray = []
+}
 
 /*
     Invoke the `filterByProperty` function passing
